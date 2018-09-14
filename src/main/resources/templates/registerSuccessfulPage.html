@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+   <head>
+      <title>Successfully registered</title>
+      <style>
+        span {color: blue;}
+      </style>
+            <link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+   </head>
+    
+   <body>
+    
+      <!-- Include _menu.html -->
+      <th:block th:include="/_menu"></th:block>  
+       
+      <h2>You have successfully registered!</h2>
+       
+      <div th:if="${flashUser != null}">
+         <ul>
+            <li>User Name: <span th:utext="${flashUser.userName}">..</span></li>
+            <li>Email: <span th:utext="${flashUser.email}">..</span></li>
+         </ul>
+      </div>
+      
+       
+   </body>
+</html>
